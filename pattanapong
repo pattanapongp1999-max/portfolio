@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Frontend Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Dev<span>Portfolio</span></a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-sm">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="about">
+        <div class="container">
+            <span class="badge">Available for Work</span>
+            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+            <p>Frontend Developer focused on building clean, high-performance, and user-friendly web interfaces.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A collection of some of my best work.</p>
+            </div>
+            
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Interface</h3>
+                        <p>A modern dashboard for managing sales and inventory with real-time updates.</p>
+                        <div class="tags">
+                            <span>React</span> <span>Tailwind</span> <span>Firebase</span>
+                        </div>
+                        <a href="#" class="link">View Live &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=500" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Template</h3>
+                        <p>Minimalist portfolio design for photographers and creative professionals.</p>
+                        <div class="tags">
+                            <span>HTML</span> <span>SCSS</span> <span>GSAP</span>
+                        </div>
+                        <a href="#" class="link">View Live &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have a project in mind? Feel free to reach out. I'm always open to discussing new projects or creative ideas.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> yourname@example.com</p>
+                        <p><strong>Location:</strong> Bangkok, Thailand</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn full-width">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DevPortfolio. Built with ❤️ and Code.</p>
+        </div>
+    </footer>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            background: var(--bg-body); 
+            color: var(--secondary); 
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Navbar */
+        .navbar {
+            height: 70px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 800; text-decoration: none; color: var(--secondary); }
+        .logo span { color: var(--primary); }
+
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero { padding: 120px 0 80px; text-align: center; }
+        .badge { background: #dbeafe; color: var(--primary); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; }
+        .highlight { color: var(--primary); }
+        .hero p { max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted); font-size: 1.2rem; }
+        .hero-btns { display: flex; gap: 1rem; justify-content: center; }
+
+        /* Buttons */
+        .btn { background: var(--primary); color: white; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); border: none; cursor: pointer; display: inline-block; }
+        .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid #e2e8f0; color: var(--secondary); }
+        .btn-outline:hover { background: #f1f5f9; }
+        .btn-sm { font-size: 0.9rem; padding: 0.5rem 1rem; background: var(--secondary); color: white; border-radius: 6px; }
+
+        /* Projects */
+        .projects { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 3.5rem; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; transition: var(--transition); }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .project-img img { width: 100%; height: 220px; object-fit: cover; }
+        .project-content { padding: 1.5rem; }
+        .tags { display: flex; gap: 0.5rem; margin: 1rem 0; }
+        .tags span { background: #f1f5f9; padding: 0.2rem 0.7rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; color: var(--text-main); }
+        .link { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+        /* Contact */
+        .contact { padding-bottom: 100px; }
+        .contact-box { background: var(--secondary); color: white; border-radius: 20px; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+        .contact-info { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+        .contact-info p { color: #94a3b8; margin: 1rem 0 2rem; }
+        .contact-details p { margin-bottom: 0.5rem; }
+        
+        .contact-form { background: white; padding: 3rem; color: var(--secondary); }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 500; font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .full-width { width: 100%; }
+
+        /* Hamburger Menu */
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+        .bar { width: 25px; height: 3px; background: var(--secondary); border-radius: 2px; transition: 0.3s; }
+
+        footer { text-align: center; padding: 2rem; border-top: 1px solid #e2e8f0; color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { 
+                position: fixed; left: -100%; top: 70px; flex-direction: column; 
+                background: white; width: 100%; text-align: center; transition: 0.3s; 
+                padding: 2rem 0; box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+            }
+            .nav-links.active { left: 0; }
+            .menu-toggle { display: flex; }
+            .contact-box { grid-template-columns: 1fr; }
+            .hero-btns { flex-direction: column; }
+        }
+    </style>
+
+    <script>
+        // Toggle Mobile Menu
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            // Animation for hamburger
+            menuToggle.classList.toggle('is-active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+
+        // Simple Form Submission Alert
+        document.getElementById('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('ขอบคุณที่ติดต่อมา! ข้อความของคุณถูกส่งแล้ว (ตัวอย่าง)');
+        });
+    </script>
+</body>
+</html>
