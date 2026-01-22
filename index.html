@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +18,28 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; background: var(--bg-body); color: var(--secondary); }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: var(--bg-body);
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
         /* Navbar */
         .navbar {
@@ -34,61 +53,273 @@
             display: flex;
             align-items: center;
         }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.4rem; font-weight: 800; text-decoration: none; color: var(--secondary); }
-        .logo span { color: var(--primary); }
-        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: var(--transition); }
-        .nav-links a:hover { color: var(--primary); }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
         /* Hero */
-        .hero { padding: 120px 0 80px; text-align: center; }
-        .badge { background: #dbeafe; color: var(--primary); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; }
-        .highlight { color: var(--primary); }
-        .hero p { max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted); font-size: 1.2rem; }
-        .hero-btns { display: flex; gap: 1rem; justify-content: center; }
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .badge {
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
 
         /* Buttons */
-        .btn { background: var(--primary); color: white; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); border: none; cursor: pointer; display: inline-block; }
-        .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
-        .btn-outline { background: transparent; border: 2px solid #e2e8f0; color: var(--secondary); }
-        .btn-outline:hover { background: #f1f5f9; }
-        .btn-sm { font-size: 0.9rem; padding: 0.5rem 1rem; background: var(--secondary); color: white; border-radius: 6px; }
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e2e8f0;
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-sm {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: gray;
+            color: white;
+            border-radius: 6px;
+        }
 
         /* Projects */
-        .projects { padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 3.5rem; }
-        .section-header h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; transition: var(--transition); }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        .project-img img { width: 100%; height: 220px; object-fit: cover; }
-        .project-content { padding: 1.5rem; }
-        .tags { display: flex; gap: 0.5rem; margin: 1rem 0; }
-        .tags span { background: #f1f5f9; padding: 0.2rem 0.7rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; color: var(--text-main); }
-        .link { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .projects {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tags span {
+            background: #f1f5f9;
+            padding: 0.2rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
 
         /* Contact */
-        .contact { padding-bottom: 100px; }
-        .contact-box { background: var(--secondary); color: white; border-radius: 20px; padding: 3.5rem; max-width: 720px; margin: 0 auto; }
-        .contact-info h2 { margin-bottom: 1rem; }
-        .contact-info p { color: #94a3b8; margin-bottom: 2rem; }
-        .contact-details p { margin-bottom: 0.6rem; font-size: 0.95rem; }
-        .contact-info .btn { margin-top: 1.5rem; }
+        .contact {
+            padding-bottom: 100px;
+        }
+
+        .contact-box {
+            background: var(--secondary);
+            color: white;
+            border-radius: 20px;
+            padding: 3.5rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-info .btn {
+            margin-top: 1.5rem;
+        }
 
         /* Mobile Menu */
-        .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-        .bar { width: 25px; height: 3px; background: var(--secondary); border-radius: 2px; transition: 0.3s; }
-        
-        footer { text-align: center; padding: 2rem; border-top: 1px solid #e2e8f0; color: var(--text-muted); font-size: 0.9rem; }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #e2e8f0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
 
         @media (max-width: 768px) {
-            .nav-links { position: fixed; left: -100%; top: 70px; flex-direction: column; background: white; width: 100%; text-align: center; transition: 0.3s; padding: 2rem 0; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
-            .nav-links.active { left: 0; }
-            .menu-toggle { display: flex; }
-            .hero-btns { flex-direction: column; }
-            .contact-box { padding: 2rem; }
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .contact-box {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -115,7 +346,8 @@
         <div class="container">
             <span class="badge">Available for Work</span>
             <h1>Hi, I'm <span class="highlight">Pattanapong Plodrum</span></h1>
-            <p>Experience across Shopify, Magento (Adobe Commerce), and WordPress for global fashion brands in Thailand.</p>
+            <p>Experience across Shopify, Magento (Adobe Commerce), and WordPress for global fashion brands in Thailand.
+            </p>
             <div class="hero-btns">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Let's Talk</a>
@@ -132,11 +364,13 @@
             <div class="project-grid">
                 <article class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500" alt="Project 1">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500"
+                            alt="Project 1">
                     </div>
                     <div class="project-content">
                         <h3>Shopify Website Development</h3>
-                        <p>Building and operating e-commerce websites with focus on CMS flexibility and campaign readiness.</p>
+                        <p>Building and operating e-commerce websites with focus on CMS flexibility and campaign
+                            readiness.</p>
                         <div class="tags">
                             <span>Shopify</span> <span>Liquid</span> <span>JS</span>
                         </div>
@@ -145,7 +379,8 @@
                 </article>
                 <article class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=500" alt="Project 2">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=500"
+                            alt="Project 2">
                     </div>
                     <div class="project-content">
                         <h3>Magento CMS Customization</h3>
@@ -165,12 +400,13 @@
             <div class="contact-box">
                 <div class="contact-info">
                     <h2>Open to New Opportunities</h2>
-                    <p>I’m currently open to frontend, web, and e-commerce related roles across Shopify, Magento, and WordPress.</p>
+                    <p>I’m currently open to frontend, web, and e-commerce related roles across Shopify, Magento, and
+                        WordPress.</p>
                     <div class="contact-details">
-                        <p><strong>Email:</strong> pattanapong@email.com</p>
-                        <p><strong>Location:</strong> Bangkok, Thailand</p>
-                        <p><strong>GitHub:</strong> github.com/yourusername</p>
-                        <p><strong>LinkedIn:</strong> linkedin.com/in/yourusername</p>
+                        <p><strong>Email:</strong> pattanapong.p1999@gmail.com</p>
+                        <p><strong>Phone:</strong> 0863852431</p>
+                        <p><strong>Line:</strong> Maxerliverpool22</p>
+                        <p><strong>LinkedIn:</strong> linkedin.com/in/pattanapong</p>
                     </div>
                     <a href="resume.pdf" class="btn">Download Resume</a>
                 </div>
@@ -199,4 +435,5 @@
         });
     </script>
 </body>
+
 </html>
