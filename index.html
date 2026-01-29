@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pattanapong Plodrum | Frontend Developer Portfolio</title>
+    <title>Pattanapong Plodrum | Frontend Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -38,7 +38,6 @@
             padding: 0 1.5rem;
         }
 
-        /* Navbar */
         .navbar {
             height: 70px;
             background: rgba(255, 255, 255, 0.9);
@@ -87,7 +86,6 @@
             color: var(--primary);
         }
 
-        /* Hero */
         .hero {
             padding: 120px 0 80px;
             text-align: center;
@@ -122,14 +120,13 @@
             font-size: 1.2rem;
         }
 
-        .hero-btns {
+        .hero-button {
             display: flex;
             gap: 1rem;
             justify-content: center;
         }
 
-        /* Buttons */
-        .btn {
+        .button-port {
             background: var(--primary);
             color: white;
             padding: 0.8rem 1.8rem;
@@ -142,22 +139,22 @@
             display: inline-block;
         }
 
-        .btn:hover {
+        .button-port:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
         }
 
-        .btn-outline {
+        .button-port-outline {
             background: transparent;
             border: 2px solid #e2e8f0;
             color: var(--secondary);
         }
 
-        .btn-outline:hover {
+        .button-port-outline:hover {
             background: #f1f5f9;
         }
 
-        .btn-sm {
+        .button-port-sm {
             font-size: 0.9rem;
             padding: 0.5rem 1rem;
             background: gray;
@@ -258,11 +255,10 @@
             font-size: 0.95rem;
         }
 
-        .contact-info .btn {
+        .contact-info .button-port {
             margin-top: 1.5rem;
         }
 
-        /* Mobile Menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -310,7 +306,7 @@
                 display: flex;
             }
 
-            .hero-btns {
+            .hero-button {
                 flex-direction: column;
             }
 
@@ -334,7 +330,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="btn-sm">Resume</a></li>
+                <li><a href="#" class="button-port-sm">Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -343,11 +339,14 @@
         <div class="container">
             <span class="badge">Available for Work</span>
             <h1>Hi, I'm <span class="highlight">Pattanapong Plodrum</span></h1>
-            <p>Experience across Shopify, Magento (Adobe Commerce), and WordPress for global fashion brands in Thailand.
+            <p>
+                I work with Shopify, Magento (Adobe Commerce), and WordPress,
+                mainly on e-commerce websites for fashion brands in Thailand.
             </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+
+            <div class="hero-button">
+                <a href="#projects" class="button-port">View My Work</a>
+                <a href="#contact" class="button-port button-port-outline">Contact Me</a>
             </div>
         </div>
     </header>
@@ -361,8 +360,7 @@
             <div class="project-grid">
                 <article class="project-card">
                     <div class="project-img">
-                        <img src="shopify.jpg"
-                            alt="Project 1">
+                        <img src="shopify.jpg" alt="Project 1">
                     </div>
                     <div class="project-content">
                         <h3>Shopify Website Development</h3>
@@ -371,21 +369,22 @@
                         <div class="tags">
                             <span>Shopify</span> <span>Liquid</span> <span>JS</span>
                         </div>
-                        <a href="https://pattanapongp1999-max.github.io/portfolio/my-shopify-works/" class="link">Explore More &rarr;</a>
+                        <a href="https://pattanapongp1999-max.github.io/portfolio/my-shopify-works/"
+                            class="link">Explore More &rarr;</a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-img">
-                        <img src="magento.jpg"
-                            alt="Project 2">
+                        <img src="magento.jpg" alt="Project 2">
                     </div>
                     <div class="project-content">
                         <h3>Magento CMS Customization</h3>
                         <p>Customizing and maintaining content-driven brand websites on Adobe Commerce.</p>
                         <div class="tags">
-                            <span>Magento</span> <span>PHP</span> <span>SCSS</span>
+                            <span>Magento</span> <span>HTML</span> <span>CSS</span> <span>CMS</span>
                         </div>
-                        <a href="https://pattanapongp1999-max.github.io/portfolio/my-magento-works/" class="link">Explore More &rarr;</a>
+                        <a href="https://pattanapongp1999-max.github.io/portfolio/my-magento-works/"
+                            class="link">Explore More &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -405,7 +404,7 @@
                         <p><strong>Line:</strong> Maxerliverpool22</p>
                         <p><strong>LinkedIn:</strong> linkedin.com/in/pattanapong</p>
                     </div>
-                    <a href="resume.pdf" class="btn">Download Resume</a>
+                    <a href="resume.pdf" class="button-port">Download Resume</a>
                 </div>
             </div>
         </div>
