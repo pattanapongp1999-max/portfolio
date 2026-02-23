@@ -74,10 +74,56 @@
             color: #64748b;
             margin-top: 0.4rem;
         }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+        }
+
+        .back-home:hover {
+            color: #2563eb;
+            border-color: #2563eb;
+            background: #eff6ff;
+            transform: translateX(-4px);
+        }
+
+        @media (max-width: 1024px) {
+            .back-home {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .container {
+                padding-top: 5rem;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <a href="https://pattanapongp1999-max.github.io/portfolio/" class="back-home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back
+    </a>
     <div class="container">
 
         <h1>Magento CMS Customization & Content Operations</h1>
