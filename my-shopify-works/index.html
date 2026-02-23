@@ -88,7 +88,6 @@
             background: white;
             border: 1px solid #e2e8f0;
             position: fixed;
-            /* ทำให้ปุ่มลอยติดหน้าจอ */
             top: 2rem;
             left: 2rem;
             transition: all 0.2s;
@@ -103,18 +102,15 @@
             transform: translateX(-4px);
         }
 
-        /* ปรับตำแหน่งบนมือถือ */
         @media (max-width: 1024px) {
             .back-home {
                 position: absolute;
-                /* เปลี่ยนเป็น absolute เพื่อไม่ให้บังเนื้อหาเวลาเลื่อน */
                 top: 1rem;
                 left: 1rem;
             }
 
             .container {
                 padding-top: 5rem;
-                /* เพิ่มพื้นที่ด้านบนไม่ให้ปุ่มทับหัวข้อ */
             }
         }
     </style>
